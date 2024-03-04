@@ -33,6 +33,7 @@ export default function Crew() {
     useEffect(()=>{
       fetchAllData();
     },[])
+  
 
   
   return (
@@ -43,14 +44,16 @@ export default function Crew() {
       modules={[Pagination, A11y]}
       spaceBetween={50}
       slidesPerView={1}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
+      pagination={{ clickable: "true" }}
       style={{
               // "--swiper-pagination-color": "#FFBA08",
               "--swiper-pagination-bullet-inactive-color": "#999999",
               "--swiper-pagination-bullet-inactive-opacity": "1",
-              "--swiper-pagination-bullet-horizontal-gap": "6px",}}
+              "--swiper-pagination-bullet-horizontal-gap": "6px",
+              // "--swiper-pagination-bullet-size": "40px",
+              // "--swiper-pagination-bullet-height": "1.8%",
+              // "--swiper-pagination-bullet-width": "1.8%",
+              }}
       >
 
     {data.map((item,index)=>{
