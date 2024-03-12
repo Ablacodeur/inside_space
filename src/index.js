@@ -24,7 +24,9 @@ root.render(
         <Route path='/destination/europa' element={<Europe/>} />
         <Route path='/destination/titan' element={<Titan />} />
 
+
       </Route>
+
 
     </Routes>
   </BrowserRouter>

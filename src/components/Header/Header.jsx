@@ -2,12 +2,13 @@ import React from 'react'
 import { Stars } from 'react-bootstrap-icons'
 import s from "./style.module.css"
 import { useNavigate } from 'react-router-dom'
+import { Box, Stack } from '@mui/material'
 
 export default function Header() {
   const navigate = useNavigate()
   return (
-    <div className={s.head}>
-    <div className={s.container}>
+    <Box position='sticky' >
+    <Stack className={s.container} position='sticky' >
     <nav className="navbar navbar-expand-lg  ">
         <div className="container-fluid ">
             <a className="navbar-brand text-white" href="/"><Stars /></a>
@@ -36,7 +37,7 @@ export default function Header() {
             </div>
         </div>
     </nav>
-    </div>
-    </div>
+    </Stack>
+    </Box>
   )
 }
