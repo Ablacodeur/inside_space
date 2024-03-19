@@ -5,6 +5,10 @@ import ansari from "../../assets/crew/image-anousheh-ansari.png";
 import douglas from "../../assets/crew/image-douglas-hurley.png";
 import marc from "../../assets/crew/image-mark-shuttleworth.png";
 import glover  from "../../assets/crew/image-victor-glover.png";
+import mobile_img from "../../assets/crew/background-crew-mobile.jpg";
+import tablet_img from "../../assets/crew/background-crew-tablet.jpg";
+import desktop_img from "../../assets/crew/background-crew-desktop.jpg"
+
 
 import { SwiperSlide } from 'swiper/react';
 import { Swiper } from 'swiper/react';
@@ -14,6 +18,7 @@ import {  Pagination , A11y} from 'swiper/modules';
 // import Swiper and modules styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { Box, Stack, Typography } from '@mui/material';
 
 
 export default function Crew() {
@@ -37,7 +42,18 @@ export default function Crew() {
 
   
   return (
-    <div className={`${ s.container } mb-5`} >
+    <Box
+      className={`${s.container} mb-5`}
+      sx={{
+        backgroundImage: {xs: `url(${mobile_img})`, md: `url(${tablet_img})`, lg: `url(${desktop_img})`},
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover", // Ajout de cette ligne pour assurer que l'image couvre tout l'élément
+        height: "100vh", // Changement de "100" à "100vh" pour couvrir toute la hauteur de l'écran
+        alignItems: "center", // Ajout de cette ligne pour centrer le contenu
+        justifyContent: "center" // Ajout de cette ligne pour centrer le contenu
+
+      }}
+    >
     <div className={s.homy} >
     <Swiper
       // install Swiper modules
@@ -46,41 +62,51 @@ export default function Crew() {
       slidesPerView={1}
       pagination={{ clickable: "true" }}
       style={{
-              // "--swiper-pagination-color": "#FFBA08",
               "--swiper-pagination-bullet-inactive-color": "#999999",
               "--swiper-pagination-bullet-inactive-opacity": "1",
               "--swiper-pagination-bullet-horizontal-gap": "6px",
-              // "--swiper-pagination-bullet-size": "40px",
-              // "--swiper-pagination-bullet-height": "1.8%",
-              // "--swiper-pagination-bullet-width": "1.8%",
               }}
       >
 
     {data.map((item,index)=>{
       return(
-      <SwiperSlide key={index} style={{ width: "100%" }} >
-        <div className={`d-flex justify-content-around ${s.homy_area}`} key={index}>
-                  <div className={s.home_space}>
-                      {data.length!==0 && <span className='text-uppercase text-white-50 fs-5'>{item.role}</span>}
-                      { data.length!==0? <p className={`text-uppercase  fs-1 ${s.big_word}`} >{item.name}</p>: null}
+      <SwiperSlide 
+      key={index} 
+      style={{ width: "100%" }}
+       >
+        <Stack 
+          direction={{ xs: 'column', md: 'row' }}
+          spacing={{ xs: 1, sm: 2, md: 4 }}
+          alignItems="center"
+          textAlign={{ xs:"center",md:"start" }}
+          justifyContent="center"
+          marginTop={{ xs: 2, sm: 12, md: 10 }}
+          fontSize={{ xs: 12, sm: 15, md: 16 }}
+          sx={{ color: "silver" }} 
+          key={index}
+          flexDirection={{ xs:"column-reverse",md:'row' }}// to mmake the column reverse on the small devise
+          >
+                  <Box className={s.home_space} sx={{maxWidth:{xs:450,md: 400, lg:700}}}>
+                      {data.length!==0 && <Typography className='text-uppercase text-white-50 fs-5'>{item.role}</Typography>}
+                      { data.length!==0? <Typography sx={{ typography: { md: 'h4', xs: 'h4',lg:'h1' }, marginTop:"7%" }} textTransform="uppercase" >{item.name}</Typography>: null}
                       
                       {data.length!==0? <p className=''>{item.bio}</p>: null}
-                  </div>
-                  <div className={`d-flex flex-column ${ s.home_explore }`}>
-                      {index === 0 && <img src={douglas} alt={item.name + "image"} />}
-                      {index === 1 && <img src={marc} alt={item.name + "image"} />}
-                      {index === 2 && <img src={ansari} alt={item.name + "image"} />}
-                      {index === 3 && <img src={glover} alt={item.name + "image"} />}               
-                  </div>
+                  </Box>
+                  <Box sx={{ maxHeight:{xs: 500, md: 500, lg:1 ,sm: 450 } , maxWidth:{xs:280,md: 400, lg:1, sm:300 }}}>
+                      {index === 0 && <img src={douglas} alt={item.name + "image"}  style={{ maxHeight: "100%", maxWidth:"100%"}} />}
+                      {index === 1 && <img src={marc} alt={item.name + "image"}  style={{ maxWidth: "100%"}} />}
+                      {index === 2 && <img src={ansari} alt={item.name + "image"}  style={{ maxWidth: "100%"}} />}
+                      {index === 3 && <img src={glover} alt={item.name + "image"}  style={{ maxWidth: "100%"}} />}               
+                  </Box>
 
-        </div>
+        </Stack>
       </SwiperSlide>
       );
     })}
   </Swiper>
   
   </div>
-  </div>
+  </Box>
 
   );
 

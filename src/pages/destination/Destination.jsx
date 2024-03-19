@@ -10,10 +10,6 @@ import styled from '@emotion/styled'
 
 
 export default function Destination() {
-  // const ImageStyled = styled()({
-  //   width: "35vh"
-  // });
-
   return (
       <Box
       className={`${s.container} mb-5`}
