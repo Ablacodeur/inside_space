@@ -34,7 +34,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: (https://github.com/Ablacodeur/inside_space)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: (https://inside-space.vercel.app/)
 
 ## My process
 
@@ -48,7 +48,7 @@ Users should be able to:
 
 ### What I learned
 
-Along the way, I learnt how to utilize swiper js, create my own custom api and call it from within my component, and map with react js. I also had fun practicing using react function components.
+Along the way, I learnt how to utilize swiper js, react-router,create my own custom api and call it from within my component, and map with react js. I also had fun practicing using react function components.
 
 To see how you can add code snippets, see below:
 
@@ -71,8 +71,11 @@ To see how you can add code snippets, see below:
 
 ```
 
+### run the server with
+npm run dev-server
+
 ## Author
 
-- Website - (Ablacodeur)
-- X - (https://twitter.com/Ablacodeur)
+- Website - [Ablacodeur]
+- X - [https://twitter.com/Ablacodeur]
 
