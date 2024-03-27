@@ -28,13 +28,12 @@ Users should be able to:
 
 ### Screenshot
 
-![./readme-screenshot.png]
-
+![](./readme-screenshot.png)
 
 
 ### Links
 
-- Solution URL: [https://github.com/Ablacodeur/inside_space]
+- Solution URL: (https://github.com/Ablacodeur/inside_space)
 - Live Site URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
@@ -74,6 +73,6 @@ To see how you can add code snippets, see below:
 
 ## Author
 
-- Website - [Ablacodeur]
-- X - [https://twitter.com/Ablacodeur]
+- Website - (Ablacodeur)
+- X - (https://twitter.com/Ablacodeur)
 
