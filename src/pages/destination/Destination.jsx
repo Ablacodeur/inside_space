@@ -30,13 +30,13 @@ export default function Destination() {
       <Stack 
           direction={{ xs: 'column', md: 'row' }}
           spacing={{ xs: 1, sm: 2, md: 4 }}
-          alignItems="center"
-          justifyContent="center"
+          alignItems={{ xs:"center" ,md:"start"}}
+          justifyContent={{ xs:"center" ,md:"start"}}
           marginTop={{ xs: 12, sm: 14, md: 30 }}
           fontSize={{ xs: 12, sm: 15, md: 16 }}
           sx={{ color: "silver" }} 
       >
-          <Box flex={1.4}  sx={{ maxWidth:{xs: 200, md: 250, lg:1} }} >
+          <Box flex={1.2}  sx={{ maxWidth:{xs: 200, md: 250, lg:1} }} >
             <img src={moon} alt='ime' style={{ maxWidth: "100%"}} />
           </Box>
           <Box flex={1} sx={{ marginTop:{xs:50, sm:30} }}>

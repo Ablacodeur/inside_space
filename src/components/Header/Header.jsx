@@ -22,16 +22,16 @@ export default function Header() {
 
             <ul className={`navbar-nav ms-auto  bg-transparent w-50   ${s.ulmarg}`}>
                 <li className="nav-item " >
-                <a className="nav-link active text-white" aria-current="page" href="/">00 Home</a>
+                <a className="nav-link active text-white text-nowrap" aria-current="page" href="/">00 Home</a>
                 </li>
                 <li className="nav-item ">
-                <a className="nav-link text-white" href="/destination">01 Destinations</a>
+                <a className="nav-link text-white text-nowrap" href="/destination">01 Destinations</a>
                 </li>
                 <li className="nav-item ">
-                <a className="nav-link text-white" href="/crew">02 Crew</a>
+                <a className="nav-link text-white text-nowrap" href="/crew">02 Crew</a>
                 </li>
                 <li className="nav-item ">
-                <a className="nav-link text-white" href="/technology">03 Technologies</a>
+                <a className="nav-link text-white text-nowrap" href="/technology">03 Technologies</a>
                 </li>
             </ul>
             </div>
