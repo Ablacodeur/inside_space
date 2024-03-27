@@ -5,11 +5,13 @@
     top: -30px;
     z-index: -1;
 
+
 }
 .homy{
-    position: absolute;
-    left: 50px;
-    right: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     box-sizing: border-box;
-
 }
