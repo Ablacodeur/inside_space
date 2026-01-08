@@ -1,14 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import App from './App';
-import Home from './pages/home/Home';
-import Destination from './pages/destination/Destination';
-import Technology from './pages/technology/Technology';
-import Crew from './pages/crew/Crew';
-import Mars from './pages/destination/Mars';
-import Titan from './pages/destination/Titan';
-import Europe from './pages/destination/Europe';
+import App from './App.jsx';
+import Home from './pages/home/Home.jsx';
+import Destination from './pages/destination/Destination.jsx';
+import Technology from './pages/technology/Technology.jsx';
+import Crew from './pages/crew/Crew.jsx';
+import Mars from './pages/destination/Mars.jsx';
+import Titan from './pages/destination/Titan.jsx';
+import Europe from './pages/destination/Europe.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
