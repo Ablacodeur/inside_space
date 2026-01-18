@@ -11,12 +11,18 @@ const app = express();
 /* =====================
    MIDDLEWARES
 ===================== */
-app.use(
-  cors({
-    origin: "http://localhost:3000", 
-    credentials: true,
-  })
-);
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://inside-space.vercel.app"
+];
+
+app.use(cors({
+  origin: function (origin, cb) {
+    if (!origin) return cb(null, true);
+    if (allowedOrigins.includes(origin)) return cb(null, true);
+    return cb(null, false);
+  }
+}));
 
 app.use(express.json());
 
