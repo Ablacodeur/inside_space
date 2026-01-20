@@ -6,7 +6,6 @@ import tablet_img from "../../assets/destination/background-destination-tablet.j
 import desktop_img from "../../assets/destination/background-destination-desktop.jpg"
 import DestinationSchema from '../../components/DestinationSchema/DestinationSchema'
 import { Box, Stack } from '@mui/material'
-import styled from '@emotion/styled'
 
 
 export default function Destination() {
